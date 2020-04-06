@@ -1,7 +1,7 @@
 def turn_count (board)
  counter = 0
  board.each do |location|
-   if position_taken?(board,location)
+   if position_taken?(location)
      counter += 1
    end
  end
@@ -16,6 +16,6 @@ def current_player (board)
   end
 end
 
-def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+def position_taken?(location)
+  location != " " && location != ""
 end
