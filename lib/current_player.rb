@@ -4,7 +4,15 @@ def turn_count (board)
    if position_taken?(board,location)
      counter += 1
  end
- return counter 
+ return counter
+end
+
+def current_player (board)
+  if (turn_count(board) % 2)
+    return "X"
+  else
+    return "O"
+  end
 end
 
 def position_taken?(board, location)
