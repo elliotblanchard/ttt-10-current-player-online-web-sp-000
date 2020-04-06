@@ -3,6 +3,7 @@ def turn_count (board)
  board.each do |location|
    if position_taken?(board,location)
      counter += 1
+   end
  end
  return counter
 end
